@@ -27,6 +27,8 @@ Use the orchestrator when your task benefits from **parallel independent work**,
 
 **Skip the orchestrator** for well-scoped, single-domain work. A single agent is faster and simpler.
 
+> **Token cost scales with team size.** Each teammate is an independent agent invocation with its own context window and API calls. A 3-person team can consume 3–5× the tokens of a single agent on the same task. Reserve the orchestrator for work where parallel execution or cross-domain expertise genuinely justifies the extra cost.
+
 ## How It Works — The 4 Phases
 
 ### Phase 1 — Role Assessment
