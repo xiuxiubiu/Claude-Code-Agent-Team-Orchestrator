@@ -1,4 +1,4 @@
-# Agent Team Orchestrator
+# Claude Code Agent Team Orchestrator
 
 **A Claude Code skill for planning and coordinating native Agent Teams** — multi-specialist crews that communicate directly, share a task list, and execute in parallel.
 
