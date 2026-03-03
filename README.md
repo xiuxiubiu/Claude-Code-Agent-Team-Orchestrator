@@ -68,15 +68,45 @@ Tasks are created with clear acceptance criteria and `blockedBy`/`blocks` depend
 
 ## Installation
 
-Install via the Claude Code skill system. Add the skill to your `~/.claude/skills/` directory or use a skill registry that supports it.
+Skills are installed manually by placing a `SKILL.md` file in the correct directory. Claude discovers them automatically — no restart needed.
 
-Once installed, invoke with:
+### Method 1 — Clone (recommended)
+
+Clones the full repo so the `references/` directory is available alongside `SKILL.md`:
+
+```bash
+git clone https://github.com/xiuxiubiu/Claude-Code-Agent-Team-Orchestrator \
+  ~/.claude/skills/agent-team-orchestrator
+```
+
+### Method 2 — Copy `SKILL.md` only (minimal)
+
+For users who only want the core protocol without the reference files:
+
+```bash
+mkdir -p ~/.claude/skills/agent-team-orchestrator
+curl -fsSL https://raw.githubusercontent.com/xiuxiubiu/Claude-Code-Agent-Team-Orchestrator/main/SKILL.md \
+  -o ~/.claude/skills/agent-team-orchestrator/SKILL.md
+```
+
+### Project-scoped (team sharing)
+
+Install into a project repo so all teammates get the skill automatically:
+
+```bash
+git clone https://github.com/xiuxiubiu/Claude-Code-Agent-Team-Orchestrator \
+  .claude/skills/agent-team-orchestrator
+```
+
+Then commit `.claude/skills/` to version control.
+
+### Verify and invoke
+
+Type `/` in Claude Code — `agent-team-orchestrator` should appear in autocomplete. Then describe your task and the orchestrator handles the rest:
 
 ```
 /agent-team-orchestrator
 ```
-
-Then describe your task. The orchestrator handles the rest.
 
 ## Repository Structure
 
