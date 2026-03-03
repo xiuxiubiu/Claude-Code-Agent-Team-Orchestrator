@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Claude Code Documentation
+    url: https://docs.anthropic.com/en/docs/claude-code/overview
+    about: Official Claude Code documentation, including Agent Teams
+  - name: Claude Code GitHub
+    url: https://github.com/anthropics/claude-code
+    about: Report issues with Claude Code itself (not this skill)

@@ -1,0 +1,75 @@
+name: Bug Report
+description: Report unexpected behavior in the Agent Team Orchestrator skill
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug. Please fill in as much detail as possible.
+
+  - type: checkboxes
+    id: prerequisites
+    attributes:
+      label: Prerequisites
+      options:
+        - label: I have `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` set in my environment
+          required: true
+        - label: I searched existing issues and this has not been reported before
+          required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: A clear description of the bug.
+      placeholder: Describe what went wrong...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+      placeholder: What should have happened instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: How can we reproduce this? Include the task you gave the orchestrator.
+      placeholder: |
+        1. Invoked `/agent-team-orchestrator` with task: "..."
+        2. Approved team proposal: backend-dev, security-reviewer, doc-writer
+        3. During Phase 3, teammate X sent message Y...
+        4. Error/unexpected behavior occurred
+    validations:
+      required: true
+
+  - type: dropdown
+    id: phase
+    attributes:
+      label: Which phase did the issue occur in?
+      options:
+        - Phase 1 — Role Assessment
+        - Phase 2 — Approval Gate
+        - Phase 3 — Collaborative Planning
+        - Phase 4 — Team Execution
+        - Shutdown sequence
+        - Not phase-specific
+    validations:
+      required: true
+
+  - type: textarea
+    id: failure-scenario
+    attributes:
+      label: Relevant failure scenario (if applicable)
+      description: Does this match any scenario in `references/failure-scenarios.md`? If so, which one, and how did the documented resolution fail?
+      placeholder: "e.g. Scenario 2 (Teammate Unresponsive at Shutdown) — resolution didn't work because..."
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Claude Code version, OS, team size, number of tasks, any relevant messages from teammates.

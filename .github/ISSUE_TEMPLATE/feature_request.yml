@@ -1,0 +1,56 @@
+name: Feature Request
+description: Suggest an improvement to the orchestration protocol or skill behavior
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Feature requests are welcome. The most valuable suggestions come from real orchestration sessions — what friction did you encounter?
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: Describe the scenario where current behavior falls short. Concrete orchestration examples are most helpful.
+      placeholder: "e.g. When a teammate sends a very long planning message, the lead's synthesis step is hard to follow because..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: How should the skill behave differently? Be specific about which phase or protocol step would change.
+      placeholder: "e.g. Add a 'key decisions' summary format to the Synthesis Protocol so the lead explicitly lists..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which area does this affect?
+      options:
+        - Phase 1 — Role Assessment
+        - Phase 2 — Approval Gate / Proposal format
+        - Phase 3 — Collaborative Planning
+        - Phase 4 — Team Execution
+        - Teammate Prompt Template
+        - Shutdown sequence
+        - Failure scenarios reference
+        - Complexity gate / decision tables
+        - Documentation / examples
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: What other approaches did you consider? Why is the proposed solution better?
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Links to related issues, examples from real sessions, or references to Agent Teams documentation.
