@@ -1,9 +1,9 @@
-# Agent Teams
+# Agent Team
 
 **A Claude Code skill for planning and coordinating native Agent Teams** — multi-specialist crews that communicate directly, share a task list, and execute in parallel.
 
 > [!NOTE]
-> **Breaking Change:** The command name has changed from `/agent-team-orchestrator` to `/agent-teams`. If you have the skill installed, please update your installation and use the new command.
+> **Breaking Change:** The command name has changed from `/agent-team-orchestrator` to `/agent-team`. If you have the skill installed, please update your installation and use the new command.
 
 > [!IMPORTANT]
 > Requires `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1`
@@ -25,7 +25,7 @@
 
 ## What This Is
 
-This is a **Claude Code Skill** (invoked via `/agent-teams`) that acts as a team lead: it designs the right team composition, facilitates a collaborative planning session between specialists, resolves conflicts, and shepherds execution through a structured 4-phase process.
+This is a **Claude Code Skill** (invoked via `/agent-team`) that acts as a team lead: it designs the right team composition, facilitates a collaborative planning session between specialists, resolves conflicts, and shepherds execution through a structured 4-phase process.
 
 It uses Claude Code's **native Agent Teams** feature — where teammates run as independent agents, send peer-to-peer messages, and share a task list — not the standard `Agent` subagent tool.
 
@@ -111,8 +111,8 @@ Skills are installed manually by placing a `SKILL.md` file in the correct direct
 Clones the full repo so the `references/` directory is available alongside `SKILL.md`:
 
 ```bash
-git clone https://github.com/xiuxiubiu/agent-teams \
-  ~/.claude/skills/agent-teams
+git clone https://github.com/xiuxiubiu/agent-team \
+  ~/.claude/skills/agent-team
 ```
 
 ### Method 2 — Copy `SKILL.md` only *(minimal)*
@@ -120,9 +120,9 @@ git clone https://github.com/xiuxiubiu/agent-teams \
 For users who only want the core protocol without the reference files:
 
 ```bash
-mkdir -p ~/.claude/skills/agent-teams
-curl -fsSL https://raw.githubusercontent.com/xiuxiubiu/agent-teams/main/SKILL.md \
-  -o ~/.claude/skills/agent-teams/SKILL.md
+mkdir -p ~/.claude/skills/agent-team
+curl -fsSL https://raw.githubusercontent.com/xiuxiubiu/agent-team/main/SKILL.md \
+  -o ~/.claude/skills/agent-team/SKILL.md
 ```
 
 ### Method 3 — Project-scoped *(team sharing)*
@@ -130,18 +130,18 @@ curl -fsSL https://raw.githubusercontent.com/xiuxiubiu/agent-teams/main/SKILL.md
 Install into a project repo so all teammates get the skill automatically:
 
 ```bash
-git clone https://github.com/xiuxiubiu/agent-teams \
-  .claude/skills/agent-teams
+git clone https://github.com/xiuxiubiu/agent-team \
+  .claude/skills/agent-team
 ```
 
 Then commit `.claude/skills/` to version control.
 
 ### Verify and invoke
 
-Type `/` in Claude Code — `agent-teams` should appear in autocomplete. Then describe your task and the orchestrator handles the rest:
+Type `/` in Claude Code — `agent-team` should appear in autocomplete. Then describe your task and the orchestrator handles the rest:
 
 ```
-/agent-teams
+/agent-team
 ```
 
 ---
@@ -185,7 +185,7 @@ Type `/` in Claude Code — `agent-teams` should appear in autocomplete. Then de
 
 See [CONTRIBUTING.md](.github/CONTRIBUTING.md) for guidelines.
 
-Bug reports and feature suggestions: [open an issue](https://github.com/xiuxiubiu/agent-teams/issues).
+Bug reports and feature suggestions: [open an issue](https://github.com/xiuxiubiu/agent-team/issues).
 
 ## License
 
