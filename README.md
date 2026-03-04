@@ -108,7 +108,7 @@ Skills are installed manually by placing a `SKILL.md` file in the correct direct
 Clones the full repo so the `references/` directory is available alongside `SKILL.md`:
 
 ```bash
-git clone https://github.com/xiuxiubiu/Claude-Code-Agent-Team-Orchestrator \
+git clone https://github.com/xiuxiubiu/claude-code-agent-team-orchestrator \
   ~/.claude/skills/agent-team-orchestrator
 ```
 
@@ -118,7 +118,7 @@ For users who only want the core protocol without the reference files:
 
 ```bash
 mkdir -p ~/.claude/skills/agent-team-orchestrator
-curl -fsSL https://raw.githubusercontent.com/xiuxiubiu/Claude-Code-Agent-Team-Orchestrator/main/SKILL.md \
+curl -fsSL https://raw.githubusercontent.com/xiuxiubiu/claude-code-agent-team-orchestrator/main/SKILL.md \
   -o ~/.claude/skills/agent-team-orchestrator/SKILL.md
 ```
 
@@ -127,7 +127,7 @@ curl -fsSL https://raw.githubusercontent.com/xiuxiubiu/Claude-Code-Agent-Team-Or
 Install into a project repo so all teammates get the skill automatically:
 
 ```bash
-git clone https://github.com/xiuxiubiu/Claude-Code-Agent-Team-Orchestrator \
+git clone https://github.com/xiuxiubiu/claude-code-agent-team-orchestrator \
   .claude/skills/agent-team-orchestrator
 ```
 
@@ -182,7 +182,7 @@ Type `/` in Claude Code — `agent-team-orchestrator` should appear in autocompl
 
 See [CONTRIBUTING.md](.github/CONTRIBUTING.md) for guidelines.
 
-Bug reports and feature suggestions: [open an issue](https://github.com/xiuxiubiu/Claude-Code-Agent-Team-Orchestrator/issues).
+Bug reports and feature suggestions: [open an issue](https://github.com/xiuxiubiu/claude-code-agent-team-orchestrator/issues).
 
 ## License
 
